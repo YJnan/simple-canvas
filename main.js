@@ -18,8 +18,16 @@ eraser.onclick = function(){
     pen.classList.remove('active')
 }
 
+black.onclick = function(){
+    context.strokeStyle = 'black'
+    black.classList.add('active')
+    red.classList.remove('active')
+    green.classList.remove('active')
+    blue.classList.remove('active')
+}
 red.onclick = function(){
     context.strokeStyle = 'red'
+    black.classList.remove('active')
     red.classList.add('active')
     green.classList.remove('active')
     blue.classList.remove('active')
@@ -27,12 +35,14 @@ red.onclick = function(){
 }
 green.onclick = function(){
     context.strokeStyle = 'green'
+    black.classList.remove('active')
     red.classList.remove('active')
     green.classList.add('active')
     blue.classList.remove('active')
 }
 blue.onclick = function(){
     context.strokeStyle = 'blue'
+    black.classList.remove('active')
     red.classList.remove('active')
     green.classList.remove('active')
     blue.classList.add('active')

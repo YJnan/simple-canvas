@@ -1,6 +1,6 @@
 ol,ul{list-style: none}
 *{margin: 0;padding: 0;}
-body{margin:0;padding:0;}
+body{margin:0;padding:0;overflow:hidden; }
 #can{
     background:#fff;
     display: block;
@@ -42,6 +42,9 @@ body{margin:0;padding:0;}
     border-radius:50%;
     margin:10px 7px;
     transition:all 0.3s;
+}
+.colors li.black{
+    background: black;
 }
 .colors li.red{
     background: red;
