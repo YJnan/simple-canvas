@@ -58,5 +58,25 @@ body{margin:0;padding:0;overflow:hidden; }
 .colors li.active{
     box-shadow: 0 0 5px rgba(0,0,0,1);
     transform:scale(1.1);
+}
 
+.size{
+    position:fixed;
+    right:15px;
+    top:10px;
+}
+.size li{
+    margin:20px 0;
+}
+.size .thin{
+    height: 0;
+    width: 30px;
+    border-top:2px solid black;
+    border-radius: 5px;
+}
+.size .thick{
+    height: 0;
+    width: 30px;
+    border-top:6px solid black;
+    border-radius: 5px;
 }

@@ -1,5 +1,6 @@
 var canvas = document.getElementById('can');
 var context = canvas.getContext('2d');
+var lineWidth = 5
 
 autoSetCanvasSize(canvas);
 
@@ -16,6 +17,9 @@ eraser.onclick = function(){
     eraserEnabled = true
     eraser.classList.add('active')
     pen.classList.remove('active')
+}
+clear.onclick = function(){
+    context.clearRect(0,0,canvas.width,canvas.height)
 }
 
 black.onclick = function(){
@@ -48,6 +52,13 @@ blue.onclick = function(){
     blue.classList.add('active')
 }
 
+
+thin.onclick = function(){
+    lineWidth = 5
+}
+thick.onclick = function(){
+    lineWidth = 10
+}
 /*******/
 function autoSetCanvasSize(canvas){
     setCanvasSize();
@@ -72,9 +83,8 @@ function drawCircle(x, y, radius) {
 
 function drawLine(x1,y1,x2,y2){
     context.beginPath();
-    context.fillStyle = 'black';
     context.moveTo(x1,y1);
-    context.lineWidth = 5;
+    context.lineWidth = lineWidth;
     context.lineTo(x2,y2);
     context.stroke();
     context.closePath()
