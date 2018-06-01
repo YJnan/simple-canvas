@@ -5,13 +5,23 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>simple canvas</title>
     <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script src="https://at.alicdn.com/t/font_689972_deuwlxg8nvf2mx6r.js"></script>
 </head>
 <body>
 <canvas id="can" width=300 height=300></canvas>
 <div class="actions" id="actions">
-    <button id="eraser">橡皮擦</button>
-    <button id="brush">画笔</button>
+    <svg class="active icon" id="pen">
+        <use xlink:href="#icon-pen"></use>
+    </svg>
+    <svg class="icon" id="eraser">
+        <use xlink:href="#icon-eraser1"></use>
+    </svg>
 </div>
+<ol class="colors">
+    <li id="red" class="red"></li>
+    <li id="green" class="green"></li>
+    <li id="blue" class="blue"></li>
+</ol>
 
 <script src="./main.js"></script>
 </body>
